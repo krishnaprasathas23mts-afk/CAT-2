@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurora Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-layer">
+  <div class="aurora aurora-1"></div>
+  <div class="aurora aurora-2"></div>
+  <div class="aurora aurora-3"></div>
+  <div class="fog"></div>
+  <div class="particles" id="particles"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+</div>
+
+<div class="app">
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="theme-icon">◐</span>
+  </button>
+
+  <div class="calculator" id="calculator">
+
+    <div class="calc-header">
+      <span class="calc-title">AURORA</span>
+      <button class="history-toggle" id="historyToggle" aria-label="Toggle history">⌗</button>
+    </div>
+
+    <div class="display-wrap">
+      <div class="energy-border"></div>
+      <div class="display">
+        <div class="expression" id="expression"></div>
+        <div class="result" id="result">0</div>
+      </div>
+    </div>
+
+    <div class="keys" id="keys">
+      <button class="key fn" data-action="clear">AC</button>
+      <button class="key fn" data-action="delete">⌫</button>
+      <button class="key fn" data-action="percent">%</button>
+      <button class="key op" data-op="/">÷</button>
+
+      <button class="key num" data-num="7">7</button>
+      <button class="key num" data-num="8">8</button>
+      <button class="key num" data-num="9">9</button>
+      <button class="key op" data-op="*">×</button>
+
+      <button class="key num" data-num="4">4</button>
+      <button class="key num" data-num="5">5</button>
+      <button class="key num" data-num="6">6</button>
+      <button class="key op" data-op="-">−</button>
+
+      <button class="key num" data-num="1">1</button>
+      <button class="key num" data-num="2">2</button>
+      <button class="key num" data-num="3">3</button>
+      <button class="key op" data-op="+">+</button>
+
+      <button class="key fn" data-action="sign">±</button>
+      <button class="key num" data-num="0">0</button>
+      <button class="key num" data-action="decimal">.</button>
+      <button class="key eq" data-action="equals">=</button>
+    </div>
+  </div>
+
+  <aside class="history-panel" id="historyPanel">
+    <div class="history-header">
+      <span>History</span>
+      <button id="clearHistory" class="clear-history">Clear</button>
+    </div>
+    <div class="history-list" id="historyList"></div>
+  </aside>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
